@@ -22,10 +22,12 @@ const Nav = () => {
   };
 
   // Componente reutilizable para los enlaces de navegación con el efecto hover
-  const NavLink = ({ href, label }) => (
+  const NavLink = ({ href, label, className = '', style = {} }) => (
     <Link 
       href={href} 
-      className="group relative text-base xl:text-lg text-white font-semibold px-2 xl:px-3 py-2" onClick={() => setMenuOpen(false)}
+      className={`group relative text-base xl:text-lg text-white font-semibold px-2 xl:px-3 py-2 ${className}`} 
+      onClick={() => setMenuOpen(false)}
+      style={style}
     >
       {label}
       {/* Línea superior e inferior que aparecen en el hover */}
@@ -87,19 +89,37 @@ const Nav = () => {
       </header>
 
       {/* Mobile Menu Panel */}
-      {menuOpen && (
-        <div className="xl:hidden fixed inset-0 bg-black/90 backdrop-blur-sm z-10 flex flex-col items-center justify-center gap-8">
-          <nav className="flex flex-col items-center gap-6">
-            {navLinks.map((link) => <NavLink key={link.href} {...link} />)}
-          </nav>
-          <div className="flex items-center gap-8">
-            <Link href="/profile" onClick={toggleMenu}><User className="text-white size-7"/></Link>
-            <Link href="/wishlist" onClick={toggleMenu}><Heart className="text-white size-7"/></Link>
-            <Link href="/cart" onClick={toggleMenu}><ShoppingCart className="text-white size-7"/></Link>
-          </div>
-          <button className="bg-[--prim-color] px-8 py-3 text-white text-xl rounded-full hover:bg-yellow-400 hover:text-black transition-colors">Order Now</button>
+      <div 
+        className={`
+          lg:hidden fixed inset-0 bg-black/90 backdrop-blur-sm z-10 
+          flex flex-col items-center justify-center gap-8
+          transition-all duration-500 ease-in-out
+          ${menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}
+        `}
+      >
+        <nav className="flex flex-col items-center gap-6">
+          {navLinks.map((link, index) => (
+            <NavLink 
+              key={link.href} 
+              {...link} 
+              className={`transition-all duration-300 ${menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
+              style={{ transitionDelay: `${150 + index * 50}ms` }}
+            />
+          ))}
+        </nav>
+        <div 
+          className={`flex items-center gap-8 transition-all duration-300 delay-300 ${menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
+          style={{ transitionDelay: `${150 + navLinks.length * 50}ms` }}
+        >
+          <Link href="/profile" onClick={toggleMenu}><User className="text-white hover:text-yellow-400 transition-colors duration-300 cursor-pointer size-7"/></Link>
+          <Link href="/wishlist" onClick={toggleMenu}><Heart className="text-white hover:text-yellow-400 transition-colors duration-300 cursor-pointer size-7"/></Link>
+          <Link href="/cart" onClick={toggleMenu}><ShoppingCart className="text-white hover:text-yellow-400 transition-colors duration-300 cursor-pointer size-7"/></Link>
         </div>
-      )}
+        <button 
+          className={`bg-[--prim-color] px-8 py-3 text-white text-xl rounded-full hover:bg-yellow-400 hover:text-black transition-all duration-300 delay-300 ${menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
+          style={{ transitionDelay: `${200 + navLinks.length * 50}ms` }}
+        >Order Now</button>
+      </div>
     </>
   )
 }
