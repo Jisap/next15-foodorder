@@ -7,7 +7,7 @@ import { useState } from "react"
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/story", label: "Our Story" },
+  { href: "/story", label: "Story" },
   { href: "/shop", label: "Shop" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
@@ -37,18 +37,9 @@ const Nav = () => {
   return (
     <>
       <header className="absolute top-0 left-0 w-full z-20 px-4 sm:px-8 lg:px-12 py-5 bg-black">
-        <nav className="relative flex justify-between items-center max-w-7xl mx-auto">
-          {/* Left Section: Logo */}
-          <div>
-            <Link href="/">
-              <span className="logo font-kaushan font-bold text-4xl 2xl:text-5xl text-yellow-400 px-4 xl:px-6">
-                Just<span className="text-white">Juicy</span>
-              </span>
-            </Link>
-          </div>
-
-          {/* Center Section: Desktop Links */}
-          <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+        <nav className="relative grid grid-cols-2 md:grid-cols-10 lg:grid-cols-12 items-center max-w-7xl mx-auto">
+          {/* Left Section: Desktop Links - 5 */}
+          <div className="hidden lg:flex items-center gap-1 xl:gap-2 lg:col-span-5">
             {navLinks.map((link) => (
               <NavLink 
                 key={link.href} 
@@ -58,10 +49,19 @@ const Nav = () => {
             ))}
           </div>
 
-          {/* Right Section: Desktop Icons & Mobile Menu Button */}
-          <div className="flex items-center gap-5">
+          {/* Center Section: Logo - 4 */}
+          <div className="md:col-span-7 lg:col-span-4 justify-self-start lg:justify-self-center">
+            <Link href="/">
+              <span className="logo font-kaushan font-bold text-4xl 2xl:text-5xl text-yellow-400 px-4 xl:px-6 transition-all duration-300 hover:drop-shadow-[0_4px_4px_rgba(0,0,0,0.3)]">
+                Just<span className="text-white">Juicy</span>
+              </span>
+            </Link>
+          </div>
+          
+          {/* Right Section: Desktop Icons & Mobile Menu Button - 3 */}
+          <div className="flex items-center gap-5 justify-self-end md:col-span-3">
             {/* Desktop Icons */}
-            <div className="hidden xl:flex items-center gap-5">
+            <div className="hidden lg:flex items-center gap-5">
               <Link href="/profile" aria-label="User profile">
                 <User className="text-white hover:text-yellow-400 transition-colors duration-300 cursor-pointer size-6"/>
               </Link>
@@ -77,7 +77,7 @@ const Nav = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="xl:hidden">
+            <div className="lg:hidden">
               <button onClick={toggleMenu} className="text-white text-2xl z-30 relative">
                 {menuOpen ? <X size={30} /> : <List size={30} />}
               </button>

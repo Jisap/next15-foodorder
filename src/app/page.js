@@ -1,11 +1,12 @@
 import React from 'react'
+import Index from './Components/Index'
 
-const page = () => {
+const Home = () => {
   return (
-    <main className="p-8 text-center">
-     
-    </main>
+    <>
+     <Index />
+    </>
   )
 }
 
-export default page
+export default Home
