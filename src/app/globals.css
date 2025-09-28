@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
+/* Configuración de fuentes personalizadas */
 :root {
+  --font-kaushan: var(--font-kaushan);
+  --font-fraunces: var(--font-fraunces);
+
   --background: #ffffff;
   --foreground: #171717;
+  --prim-color: #ff679a;
+  --second-color: #00D6E4;
+  --third-color: #87a143;
+  --fourth-color: #FFC935;
+  --orange-color: #fe8f00;
+  --white-color: #fff;
+  --black-color: #000;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Variables CSS personalizadas adicionales */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-fraunces), serif;
+}
+
+/* Clases utilitarias para las fuentes */
+.font-kaushan {
+  font-family: var(--font-kaushan), cursive;
+}
+
+.font-fraunces {
+  font-family: var(--font-fraunces), serif;
+}
+
+.logo {
+  text-shadow: 2px -2px 0px var(--black-color);
 }

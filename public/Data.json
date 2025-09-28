@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "image":"/Fruit-Juice-1.jpg",
+        "title": "Banana Juice",
+        "price": "$12.65"
+    },
+    {
+        "id": 2,
+        "image":"/Fruit-Juice-2.jpg",
+        "title": "Fresh Green Juice",
+        "price": "$14.85"
+    },
+    {
+        "id": 3,
+        "image":"/Fruit-Juice-3.jpg",
+        "title": "Alphonso Mango Juice",
+        "price": "$15.65"
+    },
+    {
+        "id": 4,
+        "image":"/Fruit-Juice-4.jpg",
+        "title": "Kiwi And Mint Juice",
+        "price": "$13.55"
+    },
+    {
+        "id": 5,
+        "image":"/Fruit-Juice-5.jpg",
+        "title": "Milk And Cream Fruit Boba",
+        "price": "$14.15"
+    },
+    {
+        "id": 6,
+        "image":"/Fruit-Juice-6.jpg",
+        "title": "Fresh Mango Juice",
+        "price": "$11.22"
+    },
+    {
+        "id": 7,
+        "image":"/Fruit-Juice-7.jpg",
+        "title": "Grape Juice",
+        "price": "$13.25"
+    },
+    {
+        "id": 8,
+        "image":"/Fruit-Juice-8.jpg",
+        "title": "Pink Grapefruit Lemonade",
+        "price": "$12.86"
+    },
+    {
+        "id": 9,
+        "image":"/Fruit-Juice-9.jpg",
+        "title": "Pistachio Ice Cream",
+        "price": "$11.66"
+    },
+    {
+        "id": 10,
+        "image":"/Fruit-Juice-10.jpg",
+        "title": "Orange Melty Ice Cream",
+        "price": "$13.50"
+    },
+    {
+        "id": 11,
+        "image":"/Fruit-Juice-11.jpg",
+        "title": "Healthy Tomato Cold Drink",
+        "price": "$15.20"
+    },
+    {
+        "id": 12,
+        "image":"/Fruit-Juice-12.jpg",
+        "title": "Mango Milkshake",
+        "price": "$13.30"
+    },
+    {
+        "id": 13,
+        "image":"/Fruit-Juice-13.jpg",
+        "title": "Mango Milkshake",
+        "price": "$14.35"
+    },
+    {
+        "id": 14,
+        "image":"/Fruit-Juice-14.jpg",
+        "title": "Banana Juice",
+        "price": "$13.48"
+    },
+    {
+        "id": 15,
+        "image":"/Fruit-Juice-15.jpg",
+        "title": "Orange Lemonade",
+        "price": "$15.35"
+    },
+    {
+        "id": 16,
+        "image":"/Fruit-Juice-16.jpg",
+        "title": "Alphonso Mango Juice",
+        "price": "$17.15"
+    },
+    {
+        "id": 17,
+        "image":"/Fruit-Juice-17.jpg",
+        "title": "Fresh Strawberry Juice",
+        "price": "$15.25"
+    },
+    {
+        "id": 18,
+        "image":"/Fruit-Juice-18.jpg",
+        "title": "Kiwi And Mint Juice",
+        "price": "$13.45"
+    },
+    {
+        "id": 19,
+        "image":"/Fruit-Juice-19.jpg",
+        "title": "Pink Grapefruit Lemonade",
+        "price": "$12.22"
+    },
+    {
+        "id": 20,
+        "image":"/Fruit-Juice-20.jpg",
+        "title": "Orange Lemonade",
+        "price": "$13.45"
+    },
+    {
+        "id": 21,
+        "image":"/Fruit-Juice-21.jpg",
+        "title": "Pistachio Ice Cream",
+        "price": "$12.85"
+    },
+    {
+        "id": 22,
+        "image":"/Fruit-Juice-22.jpg",
+        "title": "Orange Melty Ice Cream",
+        "price": "$15.90"
+    },
+    {
+        "id": 23,
+        "image":"/Fruit-Juice-23.jpg",
+        "title": "Chocolate Cookies & Cream",
+        "price": "$11.50"
+    },
+    {
+        "id": 24,
+        "image":"/Fruit-Juice-24.jpg",
+        "title": "Healthy Tomato Cold Drink",
+        "price": "$13.65"
+    },
+    {
+        "id": 25,
+        "image":"/Fruit-Juice-25.jpg",
+        "title": "Banana Juice",
+        "price": "$15.66"
+    },
+    {
+        "id": 26,
+        "image":"/Fruit-Juice-26.jpg",
+        "title": "Fresh Green Juice",
+        "price": "$13.35"
+    },
+    {
+        "id": 27,
+        "image":"/Fruit-Juice-27.jpg",
+        "title": "Alphonso Mango Juice",
+        "price": "$15.65"
+    },
+    {
+        "id": 28,
+        "image":"/Fruit-Juice-28.jpg",
+        "title": "Kiwi And Mint Juice",
+        "price": "$13.84"
+    },
+    {
+        "id": 29,
+        "image":"/Fruit-Juice-29.jpg",
+        "title": "Milk And Cream Fruit Boba",
+        "price": "$14.15"
+    },
+    {
+        "id": 30,
+        "image":"/Fruit-Juice-30.jpg",
+        "title": "Fresh Mango Juice",
+        "price": "$16.65"
+    }
+]
