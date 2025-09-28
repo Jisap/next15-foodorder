@@ -80,8 +80,13 @@ const Nav = () => {
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
-              <button onClick={toggleMenu} className="text-white text-2xl z-30 relative">
-                {menuOpen ? <X size={30} /> : <List size={30} />}
+              <button 
+                onClick={toggleMenu} 
+                className="text-white z-30 relative h-8 w-8 flex items-center justify-center"
+                aria-label="Toggle menu"
+              >
+                <List size={30} className={`absolute transition-all duration-300 ease-in-out ${menuOpen ? 'opacity-0 -rotate-90' : 'opacity-100 rotate-0'}`} />
+                <X size={30} className={`absolute transition-all duration-300 ease-in-out ${menuOpen ? 'opacity-100 rotate-0' : 'opacity-0 rotate-90'}`} />
               </button>
             </div>
           </div>
