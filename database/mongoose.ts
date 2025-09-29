@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 
-const MONGODB_URI = process.env.MONGODB_URI;               // Obtiene la cadena de conexión de MongoDB desde las variables de entorno.                        
+//const MONGODB_URI = process.env.MONGODB_URI;               // Obtiene la cadena de conexión de MongoDB desde las variables de entorno.                        
 
 declare global {                                           // Extiende la interfaz global de NodeJS para incluir nuestra caché de mongoose.
   var mongooseCache: {                                     // Esto es para que TypeScript no se queje de una propiedad en el objeto global.
@@ -23,6 +23,7 @@ if (!cached) {
  * Reutiliza la conexión existente si ya está establecida.
  */
 export const connectToDatabase = async () => {
+  const MONGODB_URI = process.env.MONGODB_URI;               // Obtiene la cadena de conexión de MongoDB desde las variables de entorno.
   
   if (!MONGODB_URI) throw new Error('MONGODB_URI must be set within .env');    // Si no se ha definido la URI de MongoDB, lanza un error.
 
