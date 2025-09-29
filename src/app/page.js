@@ -1,5 +1,6 @@
+import Index from '@/Components/Index'
 import React from 'react'
-import Index from './Components/Index'
+
 
 const Home = () => {
   return (

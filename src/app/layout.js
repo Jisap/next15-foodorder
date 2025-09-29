@@ -1,7 +1,8 @@
 import { Kaushan_Script, Fraunces } from "next/font/google";
 import "./globals.css";
-import Nav from "./Components/Nav";
-import Footer from "./Components/Footer";
+
+import Nav from "@/Components/Nav";
+import Footer from "@/Components/Footer";
 
 const kaushan = Kaushan_Script({
   variable: "--font-kaushan",
