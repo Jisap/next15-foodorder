@@ -42,7 +42,8 @@ export const connectToDatabase = async () => {
   }
 
   
-  console.log(`Connected to database ${process.env.NODE_ENV} - ${MONGODB_URI}`);  // Mensaje de éxito para depuración.
+  //console.log(`Connected to database ${process.env.NODE_ENV} - ${MONGODB_URI}`);  // Mensaje de éxito para depuración.
+  console.log(`Connected to database ${process.env.NODE_ENV}`);               // Mensaje de éxito para depuración.
 
   
   return cached.conn;                                                         // Retorna la conexión establecida.
