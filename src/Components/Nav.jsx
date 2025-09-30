@@ -38,7 +38,7 @@ const Nav = () => {
 
   return (
     <>
-      <header className="absolute top-0 left-0 w-full z-20 px-4 sm:px-8 lg:px-12 py-5 bg-black">
+      <header className="absolute top-0 left-0 w-full z-20 px-4 sm:px-8 lg:px-12 py-5 bg-transparent">
         <nav className="relative grid grid-cols-2 md:grid-cols-10 lg:grid-cols-12 items-center max-w-7xl mx-auto">
           {/* Left Section: Desktop Links - 5 */}
           <div className="hidden lg:flex items-center gap-1 xl:gap-2 lg:col-span-5">
@@ -65,13 +65,13 @@ const Nav = () => {
             {/* Desktop Icons */}
             <div className="hidden lg:flex items-center gap-5">
               <Link href="/profile" aria-label="User profile">
-                <User className="text-white hover:text-yellow-400 transition-colors duration-300 cursor-pointer size-6"/>
+                <User className="text-white hover:text-black/90 transition-colors duration-300 cursor-pointer size-6"/>
               </Link>
               <Link href="/wishlist" aria-label="Wishlist">
-                <Heart className="text-white hover:text-yellow-400 transition-colors duration-300 cursor-pointer size-6"/>
+                <Heart className="text-white hover:text-black/90 transition-colors duration-300 cursor-pointer size-6"/>
               </Link>
               <Link href="/cart" aria-label="Shopping cart">
-                <ShoppingCart className="text-white hover:text-yellow-400 transition-colors duration-300 cursor-pointer size-6"/>
+                <ShoppingCart className="text-white hover:text-black/90 transition-colors duration-300 cursor-pointer size-6"/>
               </Link>
               <button className="bg-[--prim-color] px-5 py-2 text-white text-lg rounded-full hover:bg-yellow-400 hover:text-black transition-colors">
                 Order Now

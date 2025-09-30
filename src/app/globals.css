@@ -33,3 +33,154 @@ body {
 .logo {
   text-shadow: 2px -2px 0px var(--black-color);
 }
+
+/* Hero */
+.header {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--prim-color);
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--second-color);
+  mask-image: url(../assets/hero-mask.png);
+  mask-repeat: no-repeat;
+  mask-position: top right;
+  mask-size: 35% 90%;
+}
+
+.hero-title {
+  text-shadow: 5px -2px 0 var(--color-white);
+  color: var(--fourth-color);
+  font-style: italic;
+  font-size: 10rem;
+  line-height: 10rem; 
+}
+
+.hero-title2 {
+  color: var(--second-color);
+}
+
+.elm {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.elm1 {
+  top: 60%;
+  left: 75%;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.elm2 {
+  top: 10%;
+  left: 40%;
+  animation: Anim-TB 3s forwards infinite;
+}
+
+.elm4 {
+  width: 100px;
+  top: 16%;
+  left: 75%;
+  animation: Anim-TB 5s forwards infinite;
+  z-index: 1;
+}
+
+.elm5 {
+  width: 60px;
+  top: 16%;
+  left: 10%;
+  animation: Anim-TB 3s forwards infinite !important;
+  z-index: 1;
+}
+
+.elm6 {
+  width: 420px;
+  height: 420px;
+  top: 47%;
+  left: 27%;
+  object-fit: contain;
+}
+
+.elm7 {
+  width: 250px;
+  height: 250px;
+  top: 75%;
+  left: 12%;
+  object-fit: contain;
+}
+
+.elm8 {
+  width: 180px;
+  top: 25%;
+  left: 88%;
+  z-index: 1;
+  animation: Anim-half-rotate 10s linear infinite !important;
+}
+
+.elm9 {
+  top: 80%;
+  left: 80%;
+  width: 300px;
+}
+
+.elm10 {
+  top: 80%;
+  left: 30%;
+  width: 120px;
+}
+
+@keyframes Anim-TB {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes Anim-half-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes Anim-scale {
+  0% {
+    transform: rotate(-120deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(-120deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(-120deg) scale(1);
+  }
+}
+
+.nav {
+  z-index: 9999 !important;
+}
