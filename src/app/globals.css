@@ -185,3 +185,119 @@ body {
 .nav {
   z-index: 9999 !important;
 }
+
+/* Flavors */
+
+.section {
+  position: relative;
+  width: 100%;
+}
+
+.favorite-flavors {
+  background-color: var(--fourth-color);
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  top: 18%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-color: var(--fourth-color);
+  mask-image: url(../assets//curv-candy-img.png);
+  mask-repeat: no-repeat;
+  mask-position: 100% 30%;
+  z-index: 0;
+}
+
+.section-elm {
+  position: absolute;
+  top: 5%;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.section-elm1 {
+  left: 5%;
+  animation: Anim-slow-rotate 10s forwards linear infinite;
+}
+
+.section-elm2 {
+  width: 250px;
+  object-fit: contain;
+  top: 0;
+  right: 0;
+  animation: Anim-TB 5s forwards linear infinite;
+}
+
+@keyframes Anim-slow-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.flavor-swiper {
+  padding-top: 2% !important;
+} 
+
+.flavor-img {
+  position: relative;
+}
+
+.flavor-img::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: var(--third-color);
+  mask-image: url(../assets//Fruit-Juice-card-mask.png);
+  mask-repeat: no-repeat;
+  mask-position: top;
+  mask-size: 100% 102%;
+  z-index: -1;
+  transition: .3s
+}
+
+.flavor-card:hover .flavor-img::after {
+  transform: translate(-50%, -50%) scale(1.04)
+}
+
+.flavor-img2::after {
+  background-color: var(--orange-color) !important;
+}
+
+.flavor-img3::after {
+  background-color: var(--prim-color) !important;
+}
+
+.flavor-img4::after {
+  background-color: #c18bff !important;
+}
+
+.flavor-img5::after {
+  background-color: #F19D30 !important;
+}
+
+.flavor-img6::after {
+  background-color: #e4e3e1 !important;
+}
+
+.flavor-img7::after {
+  background-color: #eeaf67 !important;
+}
+
+
+

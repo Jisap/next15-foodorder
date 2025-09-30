@@ -1,4 +1,17 @@
-import { Flavor1, Flavor2, Flavor3, Flavor4, Flavor5, garpsImg, sectionElm1, sectionElm2 } from '@/assets/images'
+import { 
+  Flavor1, 
+  Flavor2, 
+  Flavor3, 
+  Flavor4, 
+  Flavor5,
+  Flavor6,
+  Flavor7,   
+  garpsImg, 
+  sectionElm1, 
+  sectionElm2, 
+  sectionElm3, 
+  sectionElm4
+} from '@/assets/images'
 import Image from 'next/image'
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,44 +25,57 @@ const flavorsData = [
     img: Flavor1,
     alt: "Avocado Smoothie",
     title: "Avocado",
-    varieties: "14+ Varieties"
+    varieties: "14+ Varieties",
+    imgClass: "flavor-img1" // Aunque no existe, es bueno para la consistencia
   },
   {
     img: Flavor2,
     alt: "Twisted Smoothie",
     title: "Twisted",
-    varieties: "12+ Varieties"
+    varieties: "12+ Varieties",
+    imgClass: "flavor-img2"
   },
   // Añade más sabores aquí para que aparezcan automáticamente en el carrusel
   {
     img: Flavor3,
-    alt: "Grapes Smoothie",
-    title: "Grapes",
-    varieties: "25+ Varieties"
+    alt: "Strawberry Smoothie",
+    title: "Strawberry",
+    varieties: "42+ Varieties",
+    imgClass: "flavor-img3"
   },
   {
     img: Flavor4,
-    alt: "Arandanos Smoothie",
-    title: "Arandanos",
-    varieties: "12+ Varieties"
+    alt: "Blackberry Smoothie",
+    title: "Blackberry",
+    varieties: "38+ Varieties",
+    imgClass: "flavor-img4"
   },
   {
     img: Flavor5,
-    alt: "Cafe Smoothie",
-    title: "Cafe",
-    varieties: "14+ Varieties"
+    alt: "Ice Latte",
+    title: "Ice Latte",
+    varieties: "52+ Varieties",
+    imgClass: "flavor-img5"
   },
   {
-    img: Flavor3,
-    alt: "Grapes Smoothie",
-    title: "Grapes",
-    varieties: "25+ Varieties"
+    img: Flavor6,
+    alt: "Coco Smoothie",
+    title: "Coco",
+    varieties: "25+ Varieties",
+    imgClass: "flavor-img6"
   },
+  {
+    img: Flavor7,
+    alt: "Banana Smoothie",
+    title: "Banana",
+    varieties: "18+ Varieties",
+    imgClass: "flavor-img7"
+  }
 ];
 
-const FlavorCard = ({ img, alt, title, varieties }) => (
+const FlavorCard = ({ img, alt, title, varieties, imgClass }) => (
   <div className='flavor-card flex flex-col items-center justify-center text-center'>
-    <div className='flavor-img'>
+    <div className={`flavor-img ${imgClass}`}>
       <Image src={img} alt={alt} width={340} height={340} />
     </div>
     <div className='flavor-info mt-5 w-full text-start'>
@@ -61,9 +87,9 @@ const FlavorCard = ({ img, alt, title, varieties }) => (
 
 const FavoriteFlavors = () => {
   return (
-    <div className='relative overflow-hidden pb-[180px] pt-[100px]'>
-      <Image src={sectionElm1} alt='Elemento decorativo' width={150} height={150} className='absolute -left-10 top-1/4 -z-10' />
-      <Image src={sectionElm2} alt='Elemento decorativo' width={150} height={150} className='absolute -right-10 top-1/2 -z-10' />
+    <div className='section favorite-flavors relative overflow-hidden pb-[180px] pt-[100px]'>
+      <Image src={sectionElm1} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm1 absolute -left-10 top-1/4 -z-10' />
+      <Image src={sectionElm2} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm2 absolute -right-10 top-1/2 -z-10' />
       
       <div className='flex flex-col items-center justify-center'>
         <Image src={garpsImg} alt='Grapes' width={150} height={150} />
@@ -90,7 +116,7 @@ const FavoriteFlavors = () => {
             575: { slidesPerView: 2 },
             0: { slidesPerView: 2 },
           }}
-          className='w-full'
+          className='flavor-swiper w-full'
         >
           {flavorsData.map((flavor, index) => (
             <SwiperSlide key={index}>
