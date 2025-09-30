@@ -78,7 +78,7 @@ const FlavorCard = ({ img, alt, title, varieties, imgClass }) => (
     <div className={`flavor-img ${imgClass}`}>
       <Image src={img} alt={alt} width={340} height={340} />
     </div>
-    <div className='flavor-info mt-5 w-full text-start'>
+    <div className='flavor-info mt-5 w-full text-start font-kaushan'>
       <h1 className='text-4xl font-bold text-gray-800'>{title}</h1>
       <p className='text-lg text-gray-800'>{varieties}</p>
     </div>
@@ -93,7 +93,7 @@ const FavoriteFlavors = () => {
       
       <div className='flex flex-col items-center justify-center'>
         <Image src={garpsImg} alt='Grapes' width={150} height={150} />
-        <h1 className='font-fraunces text-7xl font-bold text-gray-800'>
+        <h1 className='font-fraunces text-7xl font-bold text-gray-800 [text-shadow:5px_-2px_0_var(--orange-color)]'>
           Favorite Flavors
         </h1>
       </div>

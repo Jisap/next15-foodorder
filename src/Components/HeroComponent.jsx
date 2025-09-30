@@ -39,7 +39,7 @@ const BenefitItem = ({ text }) => (
 const HeroComponent = () => {
   return (
     <div 
-      className="relative flex h-screen w-full items-center justify-center overflow-x-hidden bg-[var(--prim-color)] text-center 
+      className="relative flex h-screen w-full items-center justify-center overflow-x-hidden bg-[var(--prim-color)] text-center overflow-hidden
       after:absolute after:left-0 after:top-0 after:h-full after:w-full after:[background-color:var(--second-color)] after:content-[''] after:mask-[url(../assets/hero-mask.png)] after:mask-position-[top_right] after:mask-no-repeat after:mask-size-[35%_90%]"
     >
       {decorativeElements.map((el, index) => (
