@@ -10,7 +10,7 @@ const decorativeElements = [
   { src: elm5, alt: "Elemento decorativo 6", className: "absolute top-[47%] left-[27%] w-[420px] h-[420px] object-contain" },
   { src: elm6, alt: "Elemento decorativo 7", className: "absolute top-[75%] left-[12%] w-[250px] h-[250px] object-contain" },
   { src: elm8, alt: "Elemento decorativo 8", className: "absolute top-[25%] left-[88%] w-[180px] h-auto z-[1] animate-[Anim-half-rotate_10s_linear_infinite]" },
-  { src: elm7, alt: "Elemento decorativo 9", className: "absolute top-[80%] left-[80%] w-[300px] h-auto" },
+  { src: elm7, alt: "Elemento decorativo 9", className: "absolute top-[68%] left-[80%] w-[300px] h-auto z-[1]" },
   { src: elm1, alt: "Elemento decorativo 10", className: "absolute top-[80%] left-[30%] w-[120px] h-auto" },
 ];
 

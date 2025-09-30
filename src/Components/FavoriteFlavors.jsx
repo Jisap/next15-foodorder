@@ -1,15 +1,15 @@
-import { 
-  Flavor1, 
-  Flavor2, 
-  Flavor3, 
-  Flavor4, 
+import {
+  Flavor1,
+  Flavor2,
+  Flavor3,
+  Flavor4,
   Flavor5,
   Flavor6,
-  Flavor7,   
-  garpsImg, 
-  sectionElm1, 
-  sectionElm2, 
-  sectionElm3, 
+  Flavor7,
+  garpsImg,
+  sectionElm1,
+  sectionElm2,
+  sectionElm3,
   sectionElm4
 } from '@/assets/images'
 import Image from 'next/image'
@@ -88,11 +88,11 @@ const FlavorCard = ({ img, alt, title, varieties, imgClass }) => (
 const FavoriteFlavors = () => {
   return (
     <div className='section favorite-flavors relative overflow-hidden pb-[180px] pt-[100px]'>
-      <Image src={sectionElm1} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm1 absolute -left-10 top-1/4 -z-10' />
-      <Image src={sectionElm2} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm2 absolute -right-10 top-1/2 -z-10' />
-      
+      <Image src={sectionElm1} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm1 absolute -left-10 top-1/4 z-23' />
+      <Image src={sectionElm2} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm2 absolute -right-10 top-1/2 z-23' />
+
       <div className='flex flex-col items-center justify-center'>
-        <Image src={garpsImg} alt='Grapes' width={150} height={150} />
+        <Image src={garpsImg} alt='Grapes' width={150} height={150} className='z-25' />
         <h1 className='font-fraunces text-7xl font-bold text-gray-800 [text-shadow:5px_-2px_0_var(--orange-color)]'>
           Favorite Flavors
         </h1>

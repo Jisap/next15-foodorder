@@ -20,7 +20,7 @@ import Flavor4 from "./Flavor-4.png";
 import Flavor5 from "./Flavor-5.png";
 import Flavor6 from "./Flavor-6.png";
 import Flavor7 from "./Flavor-7.png";
-
+import Wave1 from "./wave-haikei-mask1.png"
 
 export { 
   elm1, 
@@ -44,7 +44,8 @@ export {
   Flavor4,
   Flavor5,
   Flavor6,
-  Flavor7
+  Flavor7,
+  Wave1
 
  
 };
