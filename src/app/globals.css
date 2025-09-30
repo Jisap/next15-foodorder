@@ -34,15 +34,16 @@ body {
   text-shadow: 2px -2px 0px var(--black-color);
 }
 
+
 /* Hero */
-.header {
+/* .header {
   width: 100%;
   height: 100vh;
   background-color: var(--prim-color);
   position: relative;
-}
+} */
 
-.header::after {
+/* .header::after {
   content: "";
   position: absolute;
   top: 0;
@@ -54,90 +55,90 @@ body {
   mask-repeat: no-repeat;
   mask-position: top right;
   mask-size: 35% 90%;
-}
+} */
 
-.hero-title {
+/* .hero-title {
   text-shadow: 5px -2px 0 var(--color-white);
   color: var(--fourth-color);
   font-style: italic;
   font-size: 10rem;
   line-height: 10rem; 
-}
+} */
 
-.hero-title2 {
+/* .hero-title2 {
   color: var(--second-color);
-}
+} */
 
-.elm {
+/* .elm {
   position:absolute;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-}
+} */
 
-.elm1 {
+/* .elm1 {
   top: 60%;
   left: 75%;
   transform: translate(-50%, -50%) rotate(180deg);
-}
+} */
 
-.elm2 {
+/* .elm2 {
   top: 10%;
   left: 40%;
   animation: Anim-TB 3s forwards infinite;
-}
+} */
 
-.elm4 {
+/* .elm4 {
   width: 100px;
   top: 16%;
   left: 75%;
   animation: Anim-TB 5s forwards infinite;
   z-index: 1;
-}
+} */
 
-.elm5 {
+/* .elm5 {
   width: 60px;
   top: 16%;
   left: 10%;
   animation: Anim-TB 3s forwards infinite !important;
   z-index: 1;
-}
+} */
 
-.elm6 {
+/* .elm6 {
   width: 420px;
   height: 420px;
   top: 47%;
   left: 27%;
   object-fit: contain;
-}
+} */
 
-.elm7 {
+/* .elm7 {
   width: 250px;
   height: 250px;
   top: 75%;
   left: 12%;
   object-fit: contain;
-}
+} */
 
-.elm8 {
+/* .elm8 {
   width: 180px;
   top: 25%;
   left: 88%;
   z-index: 1;
   animation: Anim-half-rotate 10s linear infinite !important;
-}
+} */
 
-.elm9 {
+/* .elm9 {
   top: 80%;
   left: 80%;
   width: 300px;
-}
+} */
 
-.elm10 {
+/* .elm10 {
   top: 80%;
   left: 30%;
   width: 120px;
-}
+} */
 
 @keyframes Anim-TB {
   0% {
@@ -145,7 +146,7 @@ body {
   }
 
   50% {
-    transform: translateY(-20);
+    transform: translateY(-20px);
   }
 
   100% {
@@ -163,7 +164,7 @@ body {
   }
 
   100% {
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
 }
 

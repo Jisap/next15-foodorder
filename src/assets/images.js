@@ -9,4 +9,5 @@ import elm8 from "./element8.png";
 import listItem from "./menu-item.svg";
 import maskImage from "./hero-mask.png"
 
+
 export { elm1, elm2, elm3, elm4, elm5, elm6, elm7, elm8, listItem, maskImage };

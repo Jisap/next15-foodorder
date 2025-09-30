@@ -1,97 +1,79 @@
 import React from "react";
 import Image from "next/image";
-import { elm1, elm2, elm3, elm4, elm5, elm6, elm7, elm8, listItem } from "@/assets/images.js";
+import { elm1, elm2, elm4, elm5, elm6, elm7, elm8, listItem, maskImage} from "@/assets/images.js";
+
+const decorativeElements = [
+  { src: elm1, alt: "Elemento decorativo 1", className: "absolute top-[60%] left-[75%] w-[150px] h-[150px] translate-x-[-50%] translate-y-[-50%] rotate-180" },
+  { src: elm2, alt: "Elemento decorativo 2", className: "absolute top-[10%] left-[40%] w-[150px] h-[150px] animate-[Anim-TB_3s_forwards_infinite]" },
+  { src: elm4, alt: "Elemento decorativo 4", className: "absolute top-[16%] left-[75%] w-[100px] h-auto z-[1] animate-[Anim-TB_5s_forwards_infinite]" },
+  { src: elm4, alt: "Elemento decorativo 5", className: "absolute top-[16%] left-[10%] w-[60px] h-auto z-[1] animate-[Anim-TB_3s_forwards_infinite]" },
+  { src: elm5, alt: "Elemento decorativo 6", className: "absolute top-[47%] left-[27%] w-[420px] h-[420px] object-contain" },
+  { src: elm6, alt: "Elemento decorativo 7", className: "absolute top-[75%] left-[12%] w-[250px] h-[250px] object-contain" },
+  { src: elm8, alt: "Elemento decorativo 8", className: "absolute top-[25%] left-[88%] w-[180px] h-auto z-[1] animate-[Anim-half-rotate_10s_linear_infinite]" },
+  { src: elm7, alt: "Elemento decorativo 9", className: "absolute top-[80%] left-[80%] w-[300px] h-auto" },
+  { src: elm1, alt: "Elemento decorativo 10", className: "absolute top-[80%] left-[30%] w-[120px] h-auto" },
+];
+
+const benefits = [
+  "Enhance Immunity",
+  "Reduce Inflammation",
+  "Reduces the risks of diabetes",
+  "Reduces Sugar Risks",
+  "Enhance Your Eyesight",
+  "Boosts Energy Levels"
+];
+
+// https://html-css-js.com/css/generator/text-shadow/
+const BenefitItem = ({ text }) => (
+  <p className="flex items-center gap-2 text-xl text-white rounded-full px-3 py-1  [text-shadow:0_1px_0_#000,0_0_6px_rgba(0,0,0,0.7)]">
+    <Image 
+      src={listItem}
+      alt="Checkmark icon"
+      width={20}
+      height={20}
+    />
+    {text}
+  </p>
+);
 
 const HeroComponent = () => {
   return (
-    <div className="header flex items-center justify-center text-center z-1 overflow-x-hidden">
-     
-      <Image src={elm1} alt="Elm1" width={150} height={150} className="elm elm1"/>
-      <Image src={elm2} alt="Elm2" width={150} height={150} className="elm elm2"/>
-      <Image src={elm4} alt="Elm4" width={150} height={150} className="elm elm4"/>
-      <Image src={elm4} alt="Elm4" width={150} height={150} className="elm elm5"/>
-      <Image src={elm5} alt="Elm5" width={150} height={150} className="elm elm6"/>
-      <Image src={elm6} alt="Elm6" width={150} height={150} className="elm elm7"/>
-      <Image src={elm8} alt="Elm8" width={150} height={150} className="elm elm8"/>
-      <Image src={elm7} alt="Elm7" width={150} height={150} className="elm elm9"/>
-      <Image src={elm1} alt="Elm1" width={150} height={150} className="elm elm10"/>
+    <div 
+      className="relative flex h-screen w-full items-center justify-center overflow-x-hidden bg-[var(--prim-color)] text-center 
+      after:absolute after:left-0 after:top-0 after:h-full after:w-full after:[background-color:var(--second-color)] after:content-[''] after:mask-[url(../assets/hero-mask.png)] after:mask-position-[top_right] after:mask-no-repeat after:mask-size-[35%_90%]"
+    >
+      {decorativeElements.map((el, index) => (
+        <Image
+          key={index}
+          src={el.src}
+          alt={el.alt}
+          width={150} // El tamaño real se controla con las clases de Tailwind
+          height={150}
+          className={el.className}
+          priority={index < 3} // Prioriza la carga de las primeras imágenes
+        />
+      ))}
 
       <div className="hero-content z-10">
-        <h1 className="hero-title font-bold font-fraunces">Delicious</h1>
-        <h1 className="hero-title hero-title2 font-bold font-fraunces">Smoothies</h1>
-        <p className="text-white font-normal">
+        <h1 className="font-fraunces text-[10rem] font-bold italic leading-[10rem] text-[var(--fourth-color)] [text-shadow:5px_-2px_0_var(--white-color)]">
+          Delicious
+        </h1>
+        <h1 className="font-fraunces text-[10rem] font-bold italic leading-[10rem] text-[var(--second-color)] [text-shadow:5px_-2px_0_var(--white-color)]">
+          Smoothies
+        </h1>
+        <p className="mx-auto max-w-lg text-white font-normal text-xl [text-shadow:0_1px_0_#000,0_0_6px_rgba(0,0,0,0.7)]">
           The perfect blend of fresh fruits and vegetables, our smoothies are
           the perfect way to start your day.
         </p>
 
-        <div className="flex hero-info justify-center items-center gap-5">
-          <div className="flex flex-col gap-2 my-8">
-            <div className="flex flex-col gap-8 my-8">
-              <p className="flex gap-2 text-xl text-white">
-                <Image 
-                  src={listItem}
-                  alt="List item"
-                  width={20}
-                  height={20}
-                />
-                Enhance Immunity
-              </p>
-              <p className="flex gap-2 text-xl text-white">
-                <Image 
-                  src={listItem}
-                  alt="List item"
-                  width={20}
-                  height={20}
-                />
-                Reduce Inflammation
-              </p>
-              <p className="flex gap-2 text-xl text-white">
-                <Image
-                  src={listItem}
-                  alt="List item"
-                  width={20}
-                  height={20}
-                />
-                Reduces the risks of diabetes
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-2 my-8">
-            <div className="flex flex-col gap-8 my-8">
-              <p className="flex gap-2 text-xl text-white">
-                <Image
-                  src={listItem}
-                  alt="List item"
-                  width={20}
-                  height={20}
-                />
-                Reduces Sugar Risks
-              </p>
-              <p className="flex gap-2 text-xl text-white">
-                <Image
-                  src={listItem}
-                  alt="List item"
-                  width={20}
-                  height={20}
-                />
-                Enhance Your Eyesight
-              </p>
-              <p className="flex gap-2 text-xl text-white">
-                <Image
-                  src={listItem}
-                  alt="List item"
-                  width={20}
-                  height={20}
-                />
-                Reduces Sugar Risks
-              </p>
-            </div>
-          </div>
+        <div className="mx-auto my-8 grid max-w-3xl grid-cols-1 justify-center gap-x-10 sm:grid-cols-2">
+          {benefits.map((benefit) => (
+            <BenefitItem key={benefit} text={benefit} />
+          ))}
         </div>
 
-        <div className="mt-5 flex justify-center items-center">
-          <button className="bg-[#ffc935] px-8 py-3 pb-4 text-xl rounded-full hover:bg-white transition-all duration-300">
+        <div className="mt-5">
+          <button className="bg-[#FFC935] px-8 py-3 pb-4 text-xl font-semibold rounded-full text-black hover:bg-white transition-all duration-300">
             Shop Juices
           </button>
         </div>
