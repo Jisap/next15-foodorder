@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useState } from "react"
 import HeroComponent from "./HeroComponent"
 import FavoriteFlavors from "./FavoriteFlavors"
+import FruitYogurtSmoothies from "./FruitYogurtSmoothies"
 
 
 
@@ -15,6 +16,7 @@ const Index = () => {
     <>
       <HeroComponent />
       <FavoriteFlavors />
+      <FruitYogurtSmoothies />
     </>
   )
 }
