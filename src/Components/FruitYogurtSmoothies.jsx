@@ -33,17 +33,51 @@ const FruitYogurtSmoothies = () => {
     visible: { y: 0, opacity: 1 }
   };
   
+  const titleText = "Fruit & Yogurt Smoothies";
+  const titleWords = titleText.split(" ");
+
+  const titleContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const titleWord = {
+    hidden: { y: 40, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 120,
+      },
+    },
+  };
 
   return (
     <div className='section-fruit relative juice-wrap pb-[100px] px-[8%] lg:px-[12%] overflow-hidden'>
       <div className="title flex flex-col justify-center items-center text-center pt-[5%]">
-        <h1 className="font-bold font-fraunces text-6xl text-white mt-12 [text-shadow:5px_-2px_0_var(--fourth-color)]">
-          Fruit & Yogurt Smoothies
-        </h1>
+        <motion.h1 
+          variants={titleContainer}
+          initial="hidden"
+          animate="visible"
+          className="font-bold font-fraunces text-6xl text-white mt-12 [text-shadow:5px_-2px_0_var(--fourth-color)]"
+        >
+          {titleWords.map((word, index) => (
+            <motion.span key={index} variants={titleWord} className="inline-block mr-4">
+              {word}
+            </motion.span>
+          ))}
+        </motion.h1>
 
-        <div className="cate-list flex flex-wrap items-center gap-4 pt-5 mt-5 mb-20">
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="cate-list flex flex-wrap items-center gap-4 pt-5 mt-5 mb-20">
           {categories.map((category, index) => (
-            <button 
+            <motion.button 
               key={index}
               onClick={() => setActiveIndex(index)}
               className={`
@@ -53,11 +87,12 @@ const FruitYogurtSmoothies = () => {
                   : "border-2 border-white text-white hover:bg-yellow-400 hover-border-transparent hover:text-black" 
                 }  
               `}
+              variants={itemVariants}
             >
               {category}
-            </button>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Se encarga de gestionar las animaciones de entrada y salida de los elementos cuando se añaden o eliminan del DOM. */}
         {/* La propiedad mode="wait" asegura que AnimatePresence espere a que la animación de salida termine antes de ejecutar la nueva animación de entrada, evitando solapamientos. */}
