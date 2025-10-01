@@ -20,7 +20,10 @@ import Flavor4 from "./Flavor-4.png";
 import Flavor5 from "./Flavor-5.png";
 import Flavor6 from "./Flavor-6.png";
 import Flavor7 from "./Flavor-7.png";
-import Wave1 from "./wave-haikei-mask1.png"
+import Wave1 from "./wave-haikei-mask1.png";
+import curvCandyImg from "./curv-candy-img.png"; // Usado en globals.css
+import wave3 from "./wave-haikei-3.png"; // Usado en globals.css
+import fruitJuiceMask from "./Fruit-Juice-card-mask.png"; // Usado en globals.css 
 
 export { 
   elm1, 
@@ -45,7 +48,8 @@ export {
   Flavor5,
   Flavor6,
   Flavor7,
-  Wave1
-
- 
+  Wave1,
+  curvCandyImg,
+  wave3,
+  fruitJuiceMask,
 };
