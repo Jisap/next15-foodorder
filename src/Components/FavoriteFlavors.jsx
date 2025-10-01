@@ -1,3 +1,7 @@
+
+
+"use client";
+
 import {
   Flavor1,
   Flavor2,
@@ -13,12 +17,15 @@ import {
   sectionElm4
 } from '@/assets/images'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+
 
 const flavorsData = [
   {
@@ -74,31 +81,101 @@ const flavorsData = [
 ];
 
 const FlavorCard = ({ img, alt, title, varieties, imgClass }) => (
-  <div className='flavor-card flex flex-col items-center justify-center text-center'>
+  <div className='flavor-card group flex flex-col items-center justify-center text-center cursor-pointer'>
     <div className={`flavor-img ${imgClass}`}>
       <Image src={img} alt={alt} width={340} height={340} />
     </div>
     <div className='flavor-info mt-5 w-full text-start font-kaushan'>
-      <h1 className='text-4xl font-bold text-gray-800'>{title}</h1>
-      <p className='text-lg text-gray-800'>{varieties}</p>
+      <h1 className='text-4xl font-bold text-gray-800 transition-all duration-300 group-hover:[text-shadow:1px_1px_3px_rgba(0,0,0,0.4)]'>{title}</h1>
+      <p className='text-lg text-gray-800 transition-all duration-300 group-hover:[text-shadow:1px_1px_3px_rgba(0,0,0,0.4)]'>{varieties}</p>
     </div>
   </div>
 );
 
 const FavoriteFlavors = () => {
+
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  const titleText = "Favorite Flavors";
+  const titleWords = titleText.split(" ");
+
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const imageVariant = {
+    hidden: { y: -30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 100 },
+    },
+  };
+
+  const titleWord = {
+    hidden: { y: 40, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 120 },
+    },
+  };
+
+  const swiperVariant = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8, // Aumentamos la duración para que sea más suave
+        ease: "easeOut", // Una curva de desaceleración agradable
+        delay: 0.5, // Ajustamos el retraso para que siga al título
+      },
+    },
+  };
+
   return (
-    <div className='section favorite-flavors relative overflow-hidden pb-[180px] pt-[100px]'>
+    <div 
+      ref={ref} 
+      className='section favorite-flavors relative overflow-hidden pb-[180px] pt-[100px]'
+    >
       <Image src={sectionElm1} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm1 absolute -left-10 top-1/4 z-23' />
       <Image src={sectionElm2} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm2 absolute -right-10 top-1/2 z-23' />
 
-      <div className='flex flex-col items-center justify-center'>
-        <Image src={garpsImg} alt='Grapes' width={150} height={150} className='z-25' />
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className='relative z-30 flex flex-col items-center justify-center'
+      >
+        <motion.div variants={imageVariant}>
+          <Image src={garpsImg} alt='Grapes' width={150} height={150} className='z-25' />
+        </motion.div>
         <h1 className='font-fraunces text-7xl font-bold text-gray-800 [text-shadow:5px_-2px_0_var(--orange-color)]'>
-          Favorite Flavors
+          {titleWords.map((word, index) => (
+            <motion.span key={index} variants={titleWord} className="inline-block mr-4">
+              {word}
+            </motion.span>
+          ))}
         </h1>
-      </div>
+      </motion.div>
 
-      <div className='mt-20'>
+      <motion.div 
+        initial="hidden" 
+        animate={inView ? "visible" : "hidden"}
+        variants={swiperVariant} 
+        className='mt-20'
+      >
         <Swiper
           slidesPerView={5.5}
           spaceBetween={20}
@@ -124,7 +201,7 @@ const FavoriteFlavors = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
     </div>
   )
 }

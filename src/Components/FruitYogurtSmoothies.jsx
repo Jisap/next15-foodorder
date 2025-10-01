@@ -5,10 +5,18 @@ import { Eye, Heart, ShoppingCart } from "lucide-react"
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const FruitYogurtSmoothies = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const [ref, inView] = useInView({
+    triggerOnce: false, // Para que se anime cada vez que entra en el viewport
+    threshold: 0.1,   // Se activa cuando el 10% del componente es visible
+  });
+
+
 
   const categories = [
     "Fruit Juice",
@@ -23,7 +31,8 @@ const FruitYogurtSmoothies = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.1,
+        delayChildren: 0.8 // Retraso para que empiece después del título
       }
     }
   };
@@ -60,12 +69,12 @@ const FruitYogurtSmoothies = () => {
   };
 
   return (
-    <div className='section-fruit relative juice-wrap pb-[100px] px-[8%] lg:px-[12%] overflow-hidden'>
+    <div ref={ref} className='section-fruit relative juice-wrap pb-[100px] px-[8%] lg:px-[12%] overflow-hidden'>
       <div className="title flex flex-col justify-center items-center text-center pt-[5%]">
         <motion.h1 
           variants={titleContainer}
           initial="hidden"
-          animate="visible"
+          animate={inView ? "visible" : "hidden"}
           className="font-bold font-fraunces text-6xl text-white mt-12 [text-shadow:5px_-2px_0_var(--fourth-color)]"
         >
           {titleWords.map((word, index) => (
@@ -75,7 +84,11 @@ const FruitYogurtSmoothies = () => {
           ))}
         </motion.h1>
 
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="cate-list flex flex-wrap items-center gap-4 pt-5 mt-5 mb-20">
+        <motion.div 
+          variants={containerVariants} 
+          initial="hidden" 
+          animate={inView ? "visible" : "hidden"} 
+          className="cate-list flex flex-wrap items-center gap-4 pt-5 mt-5 mb-20">
           {categories.map((category, index) => (
             <motion.button 
               key={index}
@@ -101,7 +114,8 @@ const FruitYogurtSmoothies = () => {
             key={activeIndex} // Clave para que AnimatePresence detecte el cambio
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            animate={inView ? "visible" : "hidden"} // Se activa con el scroll
+            transition={{ delayChildren: 0.6 }} // Retraso para que empiece después de los botones
             exit="hidden"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-10"
           >
