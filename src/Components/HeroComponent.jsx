@@ -7,7 +7,7 @@ const decorativeElements = [
   { src: elm2, alt: "Elemento decorativo 2", className: "absolute top-[10%] left-[40%] w-[150px] h-[150px] animate-[Anim-TB_3s_forwards_infinite]" },
   { src: elm4, alt: "Elemento decorativo 4", className: "absolute top-[16%] left-[75%] w-[100px] h-auto z-[1] animate-[Anim-TB_5s_forwards_infinite]" },
   { src: elm4, alt: "Elemento decorativo 5", className: "absolute top-[16%] left-[10%] w-[60px] h-auto z-[1] animate-[Anim-TB_3s_forwards_infinite]" },
-  { src: elm5, alt: "Elemento decorativo 6", className: "absolute top-[47%] left-[27%] w-[420px] h-[420px] object-contain" },
+  { src: elm5, alt: "Elemento decorativo 6", className: "absolute top-[47%] left-[7%] w-[420px] h-[420px] object-contain" },
   { src: elm6, alt: "Elemento decorativo 7", className: "absolute top-[75%] left-[12%] w-[250px] h-[250px] object-contain" },
   { src: elm8, alt: "Elemento decorativo 8", className: "absolute top-[25%] left-[88%] w-[180px] h-auto z-[1] animate-[Anim-half-rotate_10s_linear_infinite]" },
   { src: elm7, alt: "Elemento decorativo 9", className: "absolute top-[68%] left-[80%] w-[300px] h-auto z-[1]" },
