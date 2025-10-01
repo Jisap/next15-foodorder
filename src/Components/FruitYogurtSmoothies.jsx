@@ -59,6 +59,8 @@ const FruitYogurtSmoothies = () => {
           ))}
         </div>
 
+        {/* Se encarga de gestionar las animaciones de entrada y salida de los elementos cuando se añaden o eliminan del DOM. */}
+        {/* La propiedad mode="wait" asegura que AnimatePresence espere a que la animación de salida termine antes de ejecutar la nueva animación de entrada, evitando solapamientos. */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex} // Clave para que AnimatePresence detecte el cambio
@@ -93,11 +95,11 @@ const FruitYogurtSmoothies = () => {
                 </div>
 
                 <div className="juice-info mt-8">
-                    <h1 className="font-semibold font-fraunces text-2xl text-white">
+                    <h1 className="font-semibold font-fraunces text-2xl text-white transition-all duration-300 group-hover:[text-shadow:2px_2px_4px_#000]">
                       {item.title}
                     </h1>
 
-                    <p className="text-white font-fraunces font-semibold text-xl">
+                    <p className="text-white font-fraunces font-semibold text-xl transition-all duration-300 group-hover:[text-shadow:2px_2px_4px_#000]">
                       {item.price}
                     </p>
                 </div>
