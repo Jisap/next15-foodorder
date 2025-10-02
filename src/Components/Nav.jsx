@@ -96,7 +96,7 @@ const Nav = () => {
       {/* Mobile Menu Panel */}
       <div 
         className={`
-          lg:hidden fixed inset-0 bg-black/90 backdrop-blur-sm z-10 
+          lg:hidden fixed inset-0 bg-black/90 backdrop-blur-sm z-50 
           flex flex-col items-center justify-center gap-8
           transition-all duration-500 ease-in-out
           ${menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}
