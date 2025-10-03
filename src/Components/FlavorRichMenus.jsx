@@ -19,20 +19,20 @@ const menuData = [
 ];
 
 const MenuCard = ({ item }) => (
-  <div className="flex items-center gap-6">
+  <div className="flex items-center gap-4 md:gap-6">
     <Image 
       src={item.img} 
       alt={item.title} 
       width={120} 
       height={120} 
-      className="rounded-full object-cover w-[120px] h-[120px] border-4 border-white"
+      className="rounded-full object-cover w-[80px] h-[80px] md:w-[120px] md:h-[120px] border-4 border-white flex-shrink-0"
     />
     <div className="flex-1">
       <div className="flex justify-between items-center border-b-2 border-dashed border-white pb-2">
-        <h2 className="text-white font-bold text-2xl font-fraunces">{item.title}</h2>
-        <h2 className="text-white font-bold text-2xl font-fraunces">{item.price}</h2>
+        <h2 className="text-white font-bold text-lg md:text-2xl font-fraunces">{item.title}</h2>
+        <h2 className="text-white font-bold text-lg md:text-2xl font-fraunces">{item.price}</h2>
       </div>
-      <p className="text-white text-base pt-2">
+      <p className="text-white text-sm md:text-base pt-2">
         {item.desc}
       </p>
     </div>
