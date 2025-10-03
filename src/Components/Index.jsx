@@ -6,6 +6,7 @@ import HeroComponent from "./HeroComponent"
 import FavoriteFlavors from "./FavoriteFlavors"
 import FruitYogurtSmoothies from "./FruitYogurtSmoothies"
 import BannerComponent from "./BannerComponent"
+import FlavorRichMenus from "./FlavorRichMenus"
 
 
 
@@ -19,6 +20,7 @@ const Index = () => {
       <FavoriteFlavors />
       <FruitYogurtSmoothies />
       <BannerComponent />
+      <FlavorRichMenus />
     </>
   )
 }

@@ -20,10 +20,21 @@ import Flavor4 from "./Flavor-4.png";
 import Flavor5 from "./Flavor-5.png";
 import Flavor6 from "./Flavor-6.png";
 import Flavor7 from "./Flavor-7.png";
+import FlavorMenu1 from "./Flavor-Menu-1.jpg";
+import FlavorMenu2 from "./Flavor-Menu-2.jpg";
+import FlavorMenu3 from "./Flavor-Menu-3.jpg";
+import FlavorMenu4 from "./Flavor-Menu-4.jpg";
+import FlavorMenu5 from "./Flavor-Menu-5.jpg";
+import FlavorMenu6 from "./Flavor-Menu-6.jpg";
+import FlavorMenu7 from "./Flavor-Menu-7.jpg";
+import FlavorMenu8 from "./Flavor-Menu-8.jpg";
+import FlavorMenu9 from "./Flavor-Menu-9.jpg";
+import FlavorMenu10 from "./Flavor-Menu-10.jpg";
 import Wave1 from "./wave-haikei-mask1.png";
-import curvCandyImg from "./curv-candy-img.png"; // Usado en globals.css
-import wave3 from "./wave-haikei-3.png"; // Usado en globals.css
-import fruitJuiceMask from "./Fruit-Juice-card-mask.png"; // Usado en globals.css 
+import curvCandyImg from "./curv-candy-img.png"; 
+import curvCandyImg2 from "./candy-cusrv-02.png"; 
+import wave3 from "./wave-haikei-3.png"; 
+import fruitJuiceMask from "./Fruit-Juice-card-mask.png"; 
 import bannerIcon1 from "./banner-icon1.svg";
 import bannerIcon2 from "./banner-icon2.svg";
 import bannerIcon3 from "./banner-icon3.svg";
@@ -53,8 +64,19 @@ export {
   Flavor5,
   Flavor6,
   Flavor7,
+  FlavorMenu1,
+  FlavorMenu2,
+  FlavorMenu3,
+  FlavorMenu4,
+  FlavorMenu5,
+  FlavorMenu6,
+  FlavorMenu7,
+  FlavorMenu8,
+  FlavorMenu9,
+  FlavorMenu10,
   Wave1,
   curvCandyImg,
+  curvCandyImg2,
   wave3,
   fruitJuiceMask,
   bannerIcon1,
