@@ -5,6 +5,7 @@ import { useState } from "react"
 import HeroComponent from "./HeroComponent"
 import FavoriteFlavors from "./FavoriteFlavors"
 import FruitYogurtSmoothies from "./FruitYogurtSmoothies"
+import BannerComponent from "./BannerComponent"
 
 
 
@@ -17,6 +18,7 @@ const Index = () => {
       <HeroComponent />
       <FavoriteFlavors />
       <FruitYogurtSmoothies />
+      <BannerComponent />
     </>
   )
 }

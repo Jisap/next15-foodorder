@@ -24,6 +24,10 @@ import Wave1 from "./wave-haikei-mask1.png";
 import curvCandyImg from "./curv-candy-img.png"; // Usado en globals.css
 import wave3 from "./wave-haikei-3.png"; // Usado en globals.css
 import fruitJuiceMask from "./Fruit-Juice-card-mask.png"; // Usado en globals.css 
+import bannerIcon1 from "./banner-icon1.svg";
+import bannerIcon2 from "./banner-icon2.svg";
+import bannerIcon3 from "./banner-icon3.svg";
+
 
 export { 
   elm1, 
@@ -52,4 +56,7 @@ export {
   curvCandyImg,
   wave3,
   fruitJuiceMask,
+  bannerIcon1,
+  bannerIcon2,
+  bannerIcon3
 };
