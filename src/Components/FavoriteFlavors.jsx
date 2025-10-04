@@ -147,10 +147,10 @@ const FavoriteFlavors = () => {
   return (
     <div 
       ref={ref} 
-      className='section favorite-flavors relative overflow-hidden pb-[180px] pt-[100px]'
+      className='section favorite-flavors relative overflow-hidden pb-[100px] pt-[100px]'
     >
-      <Image src={sectionElm1} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm1 absolute -left-10 top-1/4 z-23' />
-      <Image src={sectionElm2} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm2 absolute -right-10 top-1/2 z-23' />
+      <Image src={sectionElm1} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm1 absolute -left-10 top-1/4 z-25' />
+      <Image src={sectionElm2} alt='Elemento decorativo' width={150} height={150} className='section-elm section-elm2 absolute -right-10 top-1/4 z-25' />
 
       <motion.div 
         variants={container}
