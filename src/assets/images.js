@@ -39,7 +39,10 @@ import bannerIcon1 from "./banner-icon1.svg";
 import bannerIcon2 from "./banner-icon2.svg";
 import bannerIcon3 from "./banner-icon3.svg";
 import banner2 from "./banner-2.png";
-
+import blog1 from "./blog-1.jpg";
+import blog2 from "./blog-2.jpg";
+import blog3 from "./blog-3.jpg";
+import blogCardMask from "./blog-card-mask.png";
 
 export { 
   elm1, 
@@ -82,5 +85,10 @@ export {
   bannerIcon1,
   bannerIcon2,
   bannerIcon3,
-  banner2
+  banner2,
+  blog1,
+  blog2,
+  blog3,
+  blogCardMask
+
 };

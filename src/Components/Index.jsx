@@ -7,6 +7,7 @@ import FavoriteFlavors from "./FavoriteFlavors"
 import FruitYogurtSmoothies from "./FruitYogurtSmoothies"
 import BannerComponent from "./BannerComponent"
 import FlavorRichMenus from "./FlavorRichMenus"
+import BlogComponent from "./BlogComponent"
 
 
 
@@ -21,6 +22,7 @@ const Index = () => {
       <FruitYogurtSmoothies />
       <BannerComponent />
       <FlavorRichMenus />
+      <BlogComponent />
     </>
   )
 }
