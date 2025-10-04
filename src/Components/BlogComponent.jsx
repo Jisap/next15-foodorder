@@ -31,6 +31,26 @@ const BlogComponent = () => {
     },
   };
 
+  // Variantes de animación para las tarjetas del blog
+  const cardContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Retraso entre la animación de cada tarjeta
+        delayChildren: 0.3,   // Retraso antes de que comience la primera animación
+      },
+    },
+  };
+
+  const cardVariant = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   // 1. Centralizamos los datos del blog en un array
   const blogPosts = [
     {
@@ -79,18 +99,21 @@ const BlogComponent = () => {
       </div>
 
       {/* 2. Mapeamos el array para renderizar los componentes BlogCard */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10'>
+      <motion.div
+        className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10'
+        variants={cardContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }} // La animación se dispara una vez
+      >
         {blogPosts.map((post, index) => (
-          <BlogCard 
+          <BlogCard
             key={index}
-            image={post.image}
-            date={post.date}
-            title={post.title}
-            description={post.description}
-            altText={post.altText}
+            {...post} // Pasamos todos los datos del post como props
+            variants={cardVariant} // Pasamos la variante de animación que luego se desestructura como motionProps
           />
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }

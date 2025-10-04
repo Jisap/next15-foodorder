@@ -1,10 +1,11 @@
 // En un nuevo archivo, por ejemplo: src/Components/BlogCard.jsx
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
-const BlogCard = ({ image, date, title, description, altText }) => {
+const BlogCard = ({ image, date, title, description, altText, ...motionProps }) => {
   return (
-    <div className='blog-card cursor-pointer group'>
+    <motion.div {...motionProps} className='blog-card cursor-pointer group'>
       <div className='blog-image'>
         <Image
           src={image}
@@ -34,7 +35,7 @@ const BlogCard = ({ image, date, title, description, altText }) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
