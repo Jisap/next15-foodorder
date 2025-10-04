@@ -85,7 +85,7 @@ const BannerComponent = () => {
         </motion.div>
 
         <motion.div 
-          className='mt-8 flex justify-center items-center z-50'
+          className='mt-40 sm:mt-75 md:mt-50 lg:mt-8 flex justify-center items-center z-50'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -99,7 +99,7 @@ const BannerComponent = () => {
         <MotionImage 
           src={banner2}
           alt="banner2"
-          className='absolute right-5 bottom-20 w-[280px] sm:w-[400px] sm:bottom-15 lg:bottom-20 xl:bottom-25 2xl:w-[500px] 2xl:bottom-30 2xl:right-10'
+          className='absolute right-5 bottom-35 w-[250px] sm:w-[400px] sm:bottom-25 md:bottom-40 md:right-20 md:w-[350px] lg:bottom-20 lg:w-[300px] lg:right-5 xl:bottom-25 xl:w-[400px] 2xl:w-[500px] 2xl:bottom-30 2xl:right-10'
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false }}
