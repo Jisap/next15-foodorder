@@ -39,13 +39,13 @@ const BannerComponent = () => {
     <div className='section-banner after:hidden lg:after:block'>
       <div className='banner-content relative flex flex-col justify-center items-center h-[1000px] lg:h-[800px] '>
         <motion.div 
-          className='flex flex-col text-center '
+          className='flex flex-col text-center px-4'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <h1 className='text-5xl font-fraunces font-bold text-white'>
+          <h1 className='text-5xl font-fraunces font-bold text-white '>
             Get 20% off
           </h1>
 

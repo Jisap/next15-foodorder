@@ -253,6 +253,14 @@ body {
   }
 }
 
+/* Ocultar elementos decorativos en pantallas pequeñas para FlavorRichMenus */
+@media (max-width: 576px) {
+  .section-flavor-menus .section-elm3,
+  .section-flavor-menus .section-elm4 {
+    display: none;
+  }
+}
+
 
 
 @keyframes Anim-slow-rotate {
