@@ -10,25 +10,25 @@ import 'swiper/css/pagination';
 
 const testimonialsData = [
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    text: "¡Absolutamente deliciosos! Los zumos son increíblemente frescos y me dan la energía que necesito para empezar mis mañanas. Como profesora, mis días son ajetreados, y esto es justo lo que necesitaba.",
     author: "Laara",
     role: "Teacher",
     image: test1,
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    text: "La calidad de los ingredientes es evidente en cada sorbo. Se nota que utilizan productos orgánicos y frescos. Una excelente inversión en mi salud y bienestar. ¡Totalmente recomendado!",
     author: "Karen",
     role: "Economist",
     image: test2,
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    text: "Perfecto para mis largas noches de estudio. Un zumo de estos me ayuda a mantenerme concentrado y con energía sin tener que recurrir a bebidas azucaradas. El de sandía es mi favorito.",
     author: "Greg",
     role: "Student",
     image: test3,
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    text: "Como desarrolladora, paso muchas horas frente a la pantalla. Tomarme un descanso con uno de estos smoothies es la mejor parte de mi día. Son refrescantes, sabrosos y muy saludables.",
     author: "Jasmine",
     role: "Developer",
     image: test4,
