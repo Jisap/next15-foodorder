@@ -552,6 +552,13 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 2;
+  transform: translateY(-30px)
+}
+
+@media (max-width: 576px) {
+  .test-image {
+    transform: translateY(-90px)
+  }
 }
 
 .test-image::after {
@@ -572,10 +579,19 @@ body {
   animation: fade-rotate .6s forwards linear;
 }
 
-.test-image img {
+/* Estilo para la imagen principal del autor */
+.test-image .testimonial-author-image {
   width: 50%;
   border-radius: 100%;
   object-fit: cover;
+}
+
+/* Estilo para la imagen decorativa 'garps' */
+.garspimage {
+  position: absolute;
+  bottom: 1rem; /* 16px */
+  left: 0;
+  width: 200px;
 }
 
 .test-card .test-content .test-pere,

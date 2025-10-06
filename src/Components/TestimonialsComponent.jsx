@@ -1,11 +1,13 @@
-import { garpsImg, quat, test1, test2, test3, test4 } from "@/assets/images"
+import { garpsImg, test1, test2, test3, test4 } from "@/assets/images"
 import Image from "next/image"
+import { motion } from "framer-motion"
 import { Autoplay, EffectFade } from "swiper/modules"
-import { Swiper, SwiperSlide } from "swiper/react"
-
+import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react"
+ 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
+import { Quote } from "lucide-react"
 
 
 const testimonialsData = [
@@ -35,6 +37,82 @@ const testimonialsData = [
   },
 ];
 
+const TestimonialCard = ({ testimonial }) => {
+  const { isActive } = useSwiperSlide();
+
+  const contentVariants = {
+    inactive: { opacity: 0, x: -100 },
+    active: { 
+      opacity: 1, 
+      x: 0,
+      transition: { duration: 0.7, delay: 0.6, ease: "easeOut" }
+    },
+  };
+
+  const imageVariants = {
+    inactive: { opacity: 0, scale: 0.8 },
+    active: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { duration: 0.7, delay: 0.6, ease: "easeOut" }
+    },
+  };
+
+  return (
+    <div className="test-card flex flex-col items-center lg:flex-row gap-12">
+      <motion.div
+        className="text-content lg:w-8/12 w-full pl-4 md:pl-6 flex flex-col justify-center"
+        variants={contentVariants}
+        initial="inactive"
+        animate={isActive ? "active" : "inactive"}
+      >
+        <blockquote className="flex gap-4">
+          <Quote 
+            className="text-white size-10 md:size-12 flex-shrink-0" 
+            style={{ transform: 'scaleX(-1)' }}
+            aria-hidden="true"
+          />
+
+          <div>
+            <p className="text-white max-w-xl text-lg test-pere mt-15">
+              {testimonial.text}
+            </p>
+            <div className="test-box flex justify-between items-center mt-4">
+              <div className="test-info flex items-center gap-3 text-white">
+                <h2 className="text-3xl font-bold">{testimonial.author}</h2>
+                <p className="m-0 pt-2">{testimonial.role}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex items-end">
+            <Quote className="text-white size-10 md:size-12 flex-shrink-0" aria-hidden="true" />
+          </div>
+        </blockquote>
+      </motion.div>
+
+      <motion.div 
+        className="test-image relative lg:w-8/12 h-full w-full"
+        variants={imageVariants}
+        initial="inactive"
+        animate={isActive ? "active" : "inactive"}
+      >
+        <Image 
+          src={testimonial.image} 
+          alt={testimonial.author} 
+          className="testimonial-author-image" 
+        />
+
+        <Image 
+          src={garpsImg} 
+          alt="garpsImg" 
+          className="garspimage" 
+        />
+      </motion.div>
+    </div>
+  );
+};
+
 const TestimonialsComponent = () => {
   return (
     <div className="section-testimonials pb-[100px] px-[8%] lg:px-[12%]">
@@ -52,49 +130,14 @@ const TestimonialsComponent = () => {
         spaceBetween={0}
         loop={true}
         autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
+          delay: 3500,
+          disableOnInteraction: true,
         }}
         className="mt-10"
       >
         {testimonialsData.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className="test-card flex flex-col items-center lg:flex-row gap-12">
-              <div className="text-content lg:w-8/12 w-full">
-                <p className="text-white text-lg test-pere">
-                  "{testimonial.text}
-                </p>
-  
-                <div className="test-box flex justify-between">
-                  <div className="test-info flex items-center gap-3 mt-4 text-white">
-                    <h2 className="text-3xl font-bold">
-                      {testimonial.author}
-                    </h2>
-  
-                    <p className="m-0 pt-2">- {testimonial.role}</p>
-                  </div>
-                  <Image 
-                    src={quat}
-                    alt="quat"
-                    className="mr-10"
-                  />
-                </div>
-              </div>
-              <div className="test-image lg:w-8/12 h-full w-full">
-                <Image 
-                  src={testimonial.image} 
-                  alt={testimonial.author} 
-                />
-                <Image 
-                  src={garpsImg} 
-                  alt="garpsImg" 
-                  className="absolute bottom-0 left-0"
-                  style={{
-                    width: "200px"
-                  }}
-                />
-              </div>
-            </div>
+            <TestimonialCard testimonial={testimonial} />
           </SwiperSlide>
         ))}
       </Swiper>
