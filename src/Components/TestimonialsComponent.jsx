@@ -80,7 +80,7 @@ const TestimonialsComponent = () => {
                   />
                 </div>
               </div>
-              <div className="test-image lg:w-6/12 w-full z-22">
+              <div className="test-image lg:w-8/12 h-full w-full">
                 <Image 
                   src={testimonial.image} 
                   alt={testimonial.author} 

@@ -19,6 +19,7 @@
 /* Variables CSS personalizadas adicionales */
 body {
   font-family: var(--font-fraunces), serif;
+  overflow-x: hidden;
 }
 
 /* Clases utilitarias para las fuentes */
@@ -530,13 +531,9 @@ body {
   position: relative;
   background-color: #fc6901;
   z-index: 1;
-  overflow:visible !important;
 }
 
-.section-testimonials .title {
-  position: relative;
-  z-index: 5;
-}
+
 
 .section-testimonials::after {
   content: ""; 
@@ -550,11 +547,11 @@ body {
 
 .test-image {
   position: relative;
-  height: 300px;
+  height: 420px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 22;
+  z-index: 2;
 }
 
 .test-image::after {
@@ -563,7 +560,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 58%;
+  width: 59%;
   aspect-ratio: 1 / 1;
   background-color: #ffd900;
   mask-image: url(../assets/Fruit-Juice-card-mask.png);
