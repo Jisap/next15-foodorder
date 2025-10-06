@@ -43,6 +43,11 @@ import blog1 from "./blog-1.jpg";
 import blog2 from "./blog-2.jpg";
 import blog3 from "./blog-3.jpg";
 import blogCardMask from "./blog-card-mask.png";
+import test1 from "./test-1.jpg";
+import test2 from "./test-2.jpg";
+import test3 from "./test-3.jpg";
+import test4 from "./test-4.jpg";
+import quat from "./quat.svg";
 
 export { 
   elm1, 
@@ -89,6 +94,10 @@ export {
   blog1,
   blog2,
   blog3,
-  blogCardMask
-
+  blogCardMask,
+  test1,
+  test2,
+  test3,
+  test4,
+  quat
 };

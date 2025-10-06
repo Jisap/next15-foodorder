@@ -514,6 +514,7 @@ body {
   top: 0;
   left: 0;
   padding: 10px 15px;
+  padding-top: 5px;
   background-color: #fff0ca;
   -webkit-mask-image: url(../assets/blog-card-mask.png);
   -webkit-mask-size: 100% 100%;
@@ -522,4 +523,26 @@ body {
 
 .blog-card:hover .blog-image img {
   transform: translateX(0) scale(1.1);
+}
+
+
+.section-testimonials {
+  position: relative;
+  background-color: #4435c5;
+  z-index: 1;
+}
+
+
+.section-testimonials::before {
+  content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: 60%;
+    background-color: #fff0ca;
+    clip-path: path('M 0,0 C 250,80 350,20 700,50 S 1200,80 1500,40 S 1800,0 2000,20 L 2000,0 Z');
+    z-index: -1;
+    /* Lo posiciona detrás del contenido, pero dentro del banner */
+    overflow: hidden;
 }

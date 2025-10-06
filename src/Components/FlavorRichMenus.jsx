@@ -28,7 +28,7 @@ const MenuCard = ({ item }) => (
       className="rounded-full object-cover w-[80px] h-[80px] md:w-[120px] md:h-[120px] border-4 border-white flex-shrink-0"
     />
     <div className="flex-1">
-      <div className="flex justify-between items-center border-b-2 border-dashed border-white pb-2">
+      <div className="flex justify-between items-center border-b-1  border-white pb-2">
         <h2 className="text-white font-bold text-lg md:text-2xl font-fraunces">{item.title}</h2>
         <h2 className="text-white font-bold text-lg md:text-2xl font-fraunces">{item.price}</h2>
       </div>
