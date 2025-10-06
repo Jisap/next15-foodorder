@@ -39,7 +39,7 @@ const TestimonialsComponent = () => {
   return (
     <div className="section-testimonials pb-[100px] px-[8%] lg:px-[12%]">
       <div className="title flex flex-col justify-center items-center text-center pt-[5%]">
-        <h1 className="font-bold font-fraunces text-6xl mt-12">
+        <h1 className="font-bold font-fraunces text-6xl mt-12 text-white [text-shadow:5px_-2px_0_var(--fourth-color)]">
           Testimonials
         </h1>
       </div>
