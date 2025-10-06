@@ -106,7 +106,7 @@ const FlavorRichMenus = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
-          className="font-bold font-fraunces text-6xl text-white mt-12 [text-shadow:5px_-2px_0_var(--fourth-color)]"
+          className="font-bold font-fraunces text-6xl text-white mt-20 [text-shadow:5px_-2px_0_var(--fourth-color)]"
         >
           {titleWords.map((word, index) => (
             <motion.span 

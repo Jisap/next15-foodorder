@@ -161,7 +161,7 @@ const FavoriteFlavors = () => {
         <motion.div variants={imageVariant}>
           <Image src={garpsImg} alt='Grapes' width={150} height={150} className='z-25' />
         </motion.div>
-        <h1 className='font-fraunces text-7xl font-bold text-gray-800 [text-shadow:5px_-2px_0_var(--orange-color)]'>
+        <h1 className='font-fraunces mt-6 font-bold text-5xl sm:text-6xl md:text-7xl text-gray-800 [text-shadow:5px_-2px_0_var(--orange-color)]'>
           {titleWords.map((word, index) => (
             <motion.span key={index} variants={titleWord} className="inline-block mr-4">
               {word}

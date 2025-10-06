@@ -39,7 +39,7 @@ const TestimonialsComponent = () => {
   return (
     <div className="section-testimonials pb-[100px] px-[8%] lg:px-[12%]">
       <div className="title flex flex-col justify-center items-center text-center pt-[5%]">
-        <h1 className="font-bold font-fraunces text-6xl mt-12 text-white [text-shadow:5px_-2px_0_var(--fourth-color)]">
+        <h1 className="font-bold font-fraunces text-5xl sm:text-6xl md:text-7xl mt-12 text-white [text-shadow:5px_-2px_0_var(--fourth-color)]">
           Testimonials
         </h1>
       </div>
@@ -80,7 +80,7 @@ const TestimonialsComponent = () => {
                   />
                 </div>
               </div>
-              <div className="test-image lg:w-4/12 w-full">
+              <div className="test-image lg:w-6/12 w-full z-22">
                 <Image 
                   src={testimonial.image} 
                   alt={testimonial.author} 

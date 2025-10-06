@@ -84,7 +84,7 @@ const BlogComponent = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
-          className="font-bold font-fraunces text-6xl text-[#fe8f00] mt-12 [text-shadow:5px_-2px_0_var(--white-color)]"
+          className="font-bold font-fraunces mt-20 mb-10 text-5xl sm:text-6xl md:text-7xl text-[#fe8f00]  [text-shadow:5px_-2px_0_var(--white-color)]"
         >
           {titleWords.map((word, index) => (
             <motion.span

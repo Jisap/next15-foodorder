@@ -530,6 +530,12 @@ body {
   position: relative;
   background-color: #fc6901;
   z-index: 1;
+  overflow:visible !important;
+}
+
+.section-testimonials .title {
+  position: relative;
+  z-index: 5;
 }
 
 .section-testimonials::after {
@@ -548,6 +554,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 22;
 }
 
 .test-image::after {
@@ -556,8 +563,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
-  height: 100%;
+  width: 58%;
+  aspect-ratio: 1 / 1;
   background-color: #ffd900;
   mask-image: url(../assets/Fruit-Juice-card-mask.png);
   mask-repeat: no-repeat;
@@ -615,3 +622,148 @@ body {
     /* Lo posiciona detrás del contenido, pero dentro del banner */
     overflow: hidden;
 }
+
+/* @media screen and (max-width:991px) {
+  .hero-title {
+    font-size: 5rem !important;
+    line-height: 5rem;
+  }
+
+  .elm1 {
+    top: 15%;
+    left: 50%;
+  }
+
+  .elm2 {
+    top: 30%;
+    left: 2%
+  }
+
+  .elm4 {
+    top: 8%;
+  }
+
+  .elm5 {
+    top: 12%;
+  }
+
+  .elm6 {
+    top: 40%;
+    width: 200px;
+  }
+
+  .elm7 {
+    top: 75%;
+    width: 220px;
+  }
+
+  .elm8 {
+    left: 80%;
+    top: 20%;
+    width: 150px;
+  }
+
+  .elm9 {
+    top: 75%;
+    width: 220px;
+  }
+
+  .elm10 {
+    top: 70%;
+  }
+
+  .section-elm1 {
+    left: 0;
+    width: 130px;
+  }
+
+  .section-elm2 {
+    width: 150px;
+  }
+
+  .banner-2 {
+    right: 0;
+    width: 300px;
+  }
+
+  .banner::before {
+    background-size: 150%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+
+  .banner-content {
+    height: 150vh;
+  }
+
+  .curvcandy {
+    diplay: none;
+  }
+
+  .section-elm3 {
+    top: -7%;
+    width: 170px;
+  }
+
+  .section-elm4 {
+    top: 0%;
+    width: 150px;
+  }
+
+  .test-image {
+    height: 500px;
+  }
+} */
+
+/* @media screen and (max-width:575px) {
+  .header {
+    height: 100vh;
+  }
+
+  .elm2,
+  .elm7,
+  .elm8,
+  .elm9,
+  .section-elm3,
+  .section-elm4 {
+    display: none;
+  }
+
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero-content p {
+    width: 80%;
+  }
+
+  .hero-info {
+    width: 90%;
+  }
+
+  .hero-info div {
+    width: 100%;
+  }
+
+  .hero-info p {
+    font-size: 13px;
+  }
+
+  .section::after {
+    top: -10% !important;
+    mask-image: 100% 6% !important;
+  }
+
+  .flavor-menus {
+    padding-bottom: 40%;
+  }
+
+  .favorite-flavors::after {
+    top: -3.5% !important;
+  }
+
+  
+} */

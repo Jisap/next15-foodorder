@@ -45,11 +45,11 @@ const BannerComponent = () => {
           viewport={{ once: false }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <h1 className='text-5xl font-fraunces font-bold text-white '>
+          <h1 className='text-4xl mt-10 sm:mt-40 md:text-5xl md:mt-25 font-fraunces font-bold text-white '>
             Get 20% off
           </h1>
 
-          <h1 className='text-5xl font-fraunces font-bold text-white'>
+          <h1 className='text-4xl md:text-5xl font-fraunces font-bold text-white'>
             on All Organic Juices
           </h1>
 
