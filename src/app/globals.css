@@ -528,8 +528,77 @@ body {
 
 .section-testimonials {
   position: relative;
-  background-color: #4435c5;
+  background-color: #fc6901;
   z-index: 1;
+}
+
+.section-testimonials::after {
+  content: ""; 
+  background-color:  #fc6901;
+  position: absolute;
+  top: -10%;
+  height: 70%;
+  mask-size: 100% 15% !important;
+  z-index: -1;
+}
+
+.test-image {
+  position: relative;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test-image::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 100%;
+  background-color: #ffd900;
+  mask-image: url(../assets/Fruit-Juice-card-mask.png);
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: 100% 100%;
+  z-index: -1;
+  transition: .3s;
+  animation: fade-rotate .6s forwards linear;
+}
+
+.test-image img {
+  width: 50%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.test-card .test-content .test-pere,
+.test-card .test-content .test-box {
+  opacity: 0;
+  animation: fade-bottom .6s forwards linear;
+}
+
+.test-card .test-content .test-box {
+  animation-delay: .3s;
+}
+
+@keyframes fade-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(150px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+@keyframes fade-rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg)
+  }
 }
 
 
