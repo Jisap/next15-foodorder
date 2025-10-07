@@ -1,9 +1,11 @@
 import { garpsImg, test1, test2, test3, test4 } from "@/assets/images"
 import Image from "next/image"
-import { motion } from "framer-motion"
+import { motion, useAnimation } from "framer-motion"
 import { Autoplay, EffectFade } from "swiper/modules"
 import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react"
- 
+import { useInView } from "react-intersection-observer"
+import { useEffect } from "react"
+
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
@@ -114,12 +116,39 @@ const TestimonialCard = ({ testimonial }) => {
 };
 
 const TestimonialsComponent = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
     <div className="section-testimonials pb-[100px] px-[8%] lg:px-[12%]">
-      <div className="title flex flex-col justify-center items-center text-center pt-[5%]">
-        <h1 className="font-bold font-fraunces text-5xl sm:text-6xl md:text-7xl mt-12 text-white [text-shadow:5px_-2px_0_var(--fourth-color)]">
+      <div ref={ref} className="title flex flex-col justify-center items-center text-center pt-[5%]">
+        <motion.h1
+          className="font-bold font-fraunces text-5xl sm:text-6xl md:text-7xl mt-12 text-white [text-shadow:5px_-2px_0_var(--fourth-color)]"
+          variants={titleVariants}
+          initial="hidden"
+          animate={controls}
+        >
           Testimonials
-        </h1>
+        </motion.h1>
       </div>
 
       <Swiper
