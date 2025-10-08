@@ -243,6 +243,24 @@ const Footer = () => {
           </div>
         </footer>
       </div>
+
+      <div className="footer-bottom px-[8%] lg:px-[12%] bg-[#ffc935]">
+        <div className="footer-bottombar py-3">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5">
+            <div className="text-[17px]">
+              copyright © 2025 Just Juicy. All rights reserved.
+            </div>
+
+            <div className="payment-img">
+              <Image 
+                src={paymentImg}
+                alt="paymentImg"
+                className="payment"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
