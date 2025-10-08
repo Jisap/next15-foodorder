@@ -663,6 +663,12 @@ body {
   z-index: -1;
 }
 
+/* Elimina las sombras izquierda y derecha que Swiper añade con el efecto coverflow */
+.social-slide .swiper-slide-shadow-left,
+.social-slide .swiper-slide-shadow-right {
+  display: none !important;
+}
+
 
 .social-slide .swiper-slide:nth-child(even) .social-card {
   transform: rotate(-10deg);
