@@ -35,6 +35,8 @@ const socialData = [
   { image: insta6, icon: TiSocialPinterest, alt: 'Pinterest post' },
   { image: insta4, icon: FaXTwitter, alt: 'X/Twitter post' },
   { image: insta2, icon: FaFacebook, alt: 'Facebook post' },
+  { image: insta1, icon: FaInstagram, alt: 'Instagram post 2' },
+  { image: insta5, icon: FaYoutube, alt: 'YouTube post' },
 ];
 
 const SocialCard = ({ image, alt, Icon }) => (
@@ -54,6 +56,8 @@ const SocialComunityComponent = () => {
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+    } else {
+      controls.start("hidden");
     }
   }, [controls, inView]);
 
@@ -62,7 +66,16 @@ const SocialComunityComponent = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.5 },
+      transition: { duration: 0.8, ease: "easeOut", delay: 0.8 },
+    },
+  };
+
+  const paragraphVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut", delay: 0.6 },
     },
   };
 
@@ -80,9 +93,13 @@ const SocialComunityComponent = () => {
           ))}
         </motion.h2>
 
-        <p className="mt-4 mb-6 text-lg text-gray-700">
+        <motion.p
+          variants={paragraphVariants}
+          initial="hidden"
+          animate={controls}
+          className="mt-4 mb-6 text-lg text-gray-700">
           Follow us on social media to stay updated with our latest news and offers!
-        </p>
+        </motion.p>
       </div>
 
       <Image
