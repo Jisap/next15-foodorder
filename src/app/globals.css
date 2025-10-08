@@ -727,3 +727,52 @@ body {
   color: var(--white-color);
   /* box-shadow: 0 0 5px var(--white-color); */
 }
+
+.footer {
+  position: relative;
+  background-color: var(--prim-color);
+}
+
+.map-pin1{
+  position: absolute;
+  top: 30%;
+  left: 12%;
+}
+
+.map-pin2{
+  position: absolute;
+  top: 30%;
+  left: 65%;
+}
+
+.map-pin3{
+  position: absolute;
+  top: 68%;
+  left: 23%;
+}
+
+.map-pin4{
+  position: absolute;
+  top: 75%;
+  left: 85%;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.footer-icons:hover {
+  background-color: var(--color-black);
+  color: var(--white-color);
+  transform: translateY(-5px);
+
+}

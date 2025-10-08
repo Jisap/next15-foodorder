@@ -54,6 +54,11 @@ import insta3 from "./insta-3.jpg";
 import insta4 from "./insta-4.jpg";
 import insta5 from "./insta-5.jpg";
 import insta6 from "./insta-6.jpg";
+import footerMap from "./footer-map.png";
+import mapPin from "./map-pin.svg"
+import appStore from "./app-store.jpg";
+import googleStore from "./google-store.jpg";
+import paymentImg from "./payment.png";
 
 
 export { 
@@ -113,4 +118,9 @@ export {
   insta4,
   insta5,
   insta6,
+  footerMap,
+  mapPin,
+  appStore,
+  googleStore,
+  paymentImg
 };
