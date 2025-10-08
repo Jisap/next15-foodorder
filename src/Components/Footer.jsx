@@ -1,15 +1,45 @@
+"use client"
+
 import { appStore, footerMap, googleStore, mapPin, paymentImg } from "@/assets/images"
 import Image from "next/image"
+import { useEffect } from "react";
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import { TiSocialPinterest } from "react-icons/ti";
 import { FaXTwitter } from "react-icons/fa6";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 
 const Footer = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+  };
+
   return (
     <>
-      <div className="footer px-[8%] lg:px-[12%] pt-[100px]">
-        <div className="footer-topbar">
+      <div ref={ref} className="footer px-[8%] lg:px-[12%] pt-[100px] overflow-hidden">
+        <motion.div className="footer-topbar" variants={containerVariants} initial="hidden" animate={controls}>
           <div className="grid gird-cols-1 lg:grid-cols-2 items-center gap-5">
             <div className="map-section relative">
               <Image 
@@ -18,7 +48,7 @@ const Footer = () => {
                 className="footer-map"
               />
 
-              <div className="map-image">
+              <motion.div className="map-image" variants={itemVariants}>
                 <Image 
                   src={mapPin}
                   alt="map pin"
@@ -47,10 +77,10 @@ const Footer = () => {
                   width={25}
                   height={25}
                 />
-              </div>
+              </motion.div>
             </div>
 
-            <div className="map-content">
+            <motion.div className="map-content" variants={itemVariants}>
               <h2 className="text-white font-bold text-4xl leading-[1.2]">
                 Our Shop Is Open in Eight Nations
               </h2>
@@ -77,14 +107,14 @@ const Footer = () => {
                   className="rounded-lg object-contain"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         <footer>
           <div className="container py-[5%]">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-              <div className="lg:col-span-12">
+            <motion.div className="grid grid-cols-1 lg:grid-cols-12 gap-5" variants={containerVariants} initial="hidden" animate={controls}>
+              <motion.div className="lg:col-span-12" variants={itemVariants}>
                 <div className="logo font-kaushan font-bold text-5xl text-yellow-400">
                   Just<span className="text-white">Juicy</span>
                 </div>
@@ -113,9 +143,9 @@ const Footer = () => {
                     <TiSocialPinterest />
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="lg:col-span-12 grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 lg:mt-8">
+              <motion.div className="lg:col-span-12 grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 lg:mt-8" variants={containerVariants}>
                 <div className="space-y-2">
                   <h2 className="font-bold mb-6 text-white text-2xl md:text-3xl">Get In Touch</h2>
                   <p className="text-white text-[16px] hover:text-[#ffe600] transition-all duration-300">123 Street, <br/> New York ,MD, USA 4508</p>
@@ -206,8 +236,8 @@ const Footer = () => {
                 </div>
 
                 
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </footer>
       </div>
