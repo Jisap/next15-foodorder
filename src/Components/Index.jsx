@@ -9,6 +9,7 @@ import BannerComponent from "./BannerComponent"
 import FlavorRichMenus from "./FlavorRichMenus"
 import BlogComponent from "./BlogComponent"
 import TestimonialsComponent from "./TestimonialsComponent"
+import SocialComunityComponent from "./SocialComunityComponent"
 
 
 
@@ -25,6 +26,7 @@ const Index = () => {
       <FlavorRichMenus />
       <BlogComponent />
       <TestimonialsComponent />
+      <SocialComunityComponent />
     </>
   )
 }
