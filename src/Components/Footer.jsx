@@ -152,7 +152,7 @@ const Footer = () => {
                   <h2 className="font-bold mb-6 text-white text-2xl md:text-3xl">Get In Touch</h2>
                   <p className="text-white text-[16px] hover:text-[#ffe600] transition-all duration-300">123 Street, <br/> New York ,MD, USA 4508</p>
                   <p className="mt-3 text-white text-[16px] hover:text-[#ffe600] transition-all duration-300">000 - 123 - 456789</p>
-                  <p className="mt-3 text-white text-[16px] hover:text-[#ffe600] transition-all duration-300">support@justjuicy.com</p>
+                  <p className="mt-3 text-white text-[12px] mdtext-[16px] hover:text-[#ffe600] transition-all duration-300">support@justjuicy.com</p>
                 </div>
 
                 <div className="space-y-2">
